@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { calc } from '../games/calc.js';
+import { progression } from '../games/progression.js';
 import { askName } from '../src/cli.js';
 
 askName();
 
-calc();
+progression();

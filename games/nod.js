@@ -24,7 +24,7 @@ const gcd = (a, b) => {
 
 
 
-  export const numberNod = () => {
+  export const nod = () => {
     setCondition('Find the greatest common divisor of given numbers.');
     commonLogic(generateQuestionNod);
   

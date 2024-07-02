@@ -33,7 +33,7 @@ const generateQuestionForCalc = () => {
   };
 
 
-  export const numberCalc = () => {
+  export const calc = () => {
     setCondition('What is the result of the expression?');
     commonLogic(generateQuestionForCalc);
   };
