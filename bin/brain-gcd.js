@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { numberCalc } from '../games/calc.js';
+import { numberNod } from '../games/nod.js';
 import { askName } from '../src/cli.js';
 
 askName();
 
-numberCalc();
+numberNod();
