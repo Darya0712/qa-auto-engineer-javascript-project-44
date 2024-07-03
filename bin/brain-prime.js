@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { nod } from '../games/nod.js';
+import { prime } from '../games/prime.js';
 import { askName } from '../src/cli.js';
 
 askName();
 
-nod();
+prime();
