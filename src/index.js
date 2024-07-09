@@ -11,13 +11,11 @@ export let userAnswer;
 
 let correctCounter = 0;
 
-// Условие игры
 export const setCondition = (value) => {
   condition = value;
   console.log(condition);
 };
 
-// Общая логика игр
 export const commonLogic = (question) => {
   for (let i = 0; i < 3; i += 1) {
     const forSaveResult = question();

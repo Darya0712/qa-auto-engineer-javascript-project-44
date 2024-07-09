@@ -1,7 +1,7 @@
 import { commonLogic, setCondition } from '../src/index.js';
 import { getRandomInt } from './even.js';
 
-// Функция для NOD
+
 const gcd = (a, b) => {
   while (b !== 0) {
     const temp = b;
@@ -11,7 +11,6 @@ const gcd = (a, b) => {
   return a;
 };
 
-// Функция для проверки результата NOD
 const generateQuestionNod = () => {
   const num1 = getRandomInt(1, 100);
   const num2 = getRandomInt(1, 100);

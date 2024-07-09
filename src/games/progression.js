@@ -1,7 +1,6 @@
 import { commonLogic, setCondition } from '../src/index.js';
 import { getRandomInt } from './even.js';
 
-// Функция для прогрессии
 const generateProgression = () => {
   const length = getRandomInt(5, 10);
   const start = getRandomInt(1, 10);

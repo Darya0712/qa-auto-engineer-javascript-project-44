@@ -1,14 +1,12 @@
-import { commonLogic, setCondition } from '../src/index.js';
+import { commonLogic, setCondition } from '../index.js';
 import { getRandomInt } from './even.js';
 
-// Функция для генерации рандомного оператора
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   const randomIndex = Math.floor(Math.random() * operators.length);
   return operators[randomIndex];
 };
 
-// Функция для проверки результата операции
 const generateQuestionForCalc = () => {
   const num1 = getRandomInt(1, 100);
   const num2 = getRandomInt(1, 100);
