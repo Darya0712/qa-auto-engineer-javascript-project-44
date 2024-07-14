@@ -26,7 +26,7 @@ export const commonLogic = (question) => {
     if (myAnswer.toString() === userAnswer.toLowerCase()) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${myAnswer}'. \nLet's try again, ${name}`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${myAnswer}'. \nLet's try again, ${name}!`);
       return;
     }
   }
