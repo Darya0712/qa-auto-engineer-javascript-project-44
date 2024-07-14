@@ -18,7 +18,7 @@ const generateProgression = () => {
   const switchIndex = getRandomInt(0, length - 1);
   const correctAnswer = progression[switchIndex];
   progression[switchIndex] = '..';
-  const question = progression;
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
