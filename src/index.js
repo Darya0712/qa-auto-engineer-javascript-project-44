@@ -18,7 +18,7 @@ export const commonLogic = (question) => {
     const forSaveResult = question();
     const exp = forSaveResult[0];
 
-    console.log(`Question:${exp}`);
+    console.log(`Question: ${exp}`);
 
     userAnswer = readlineSync.question('Your answer:');
     myAnswer = forSaveResult[1];
