@@ -1,8 +1,9 @@
 import { commonLogic, getRandomInt } from '../index.js';
 
-let correctAnswer = 'yes';
+let correctAnswer;
 
 const calculatePrime = (num) => {
+  correctAnswer = 'yes';
   if (num <= 1) {
     correctAnswer = 'no';
   } else {
@@ -16,7 +17,8 @@ const calculatePrime = (num) => {
 };
 
 const generationQuestionForPrime = () => {
-  const question = getRandomInt(1, 100);
+  const question = getRandomInt(36, 37);
+
   calculatePrime(question);
   return [question, correctAnswer];
 };
