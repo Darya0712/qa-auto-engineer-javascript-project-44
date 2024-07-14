@@ -1,23 +1,20 @@
-import readlineSync, { question } from 'readline-sync';
+import readlineSync from 'readline-sync';
 import { name } from './cli.js';
 
-export let condition;
+let myAnswer;
 
-export let operation;
+let userAnswer;
 
-export let myAnswer;
+const rounds = 3;
 
-export let userAnswer;
-
-let correctCounter = 0;
-
-export const setCondition = (value) => {
-  condition = value;
-  console.log(condition);
+export const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 export const commonLogic = (question) => {
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 1; i <= rounds; i += 1) {
     const forSaveResult = question();
     const exp = forSaveResult[0];
 
@@ -28,13 +25,10 @@ export const commonLogic = (question) => {
 
     if (myAnswer.toString() === userAnswer.toLowerCase()) {
       console.log('Correct!');
-      correctCounter += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${myAnswer}'. \nLet's try again,${name}`);
-      break;
+      return;
     }
   }
-  if (correctCounter === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  console.log(`Congratulations, ${name}!`);
 };

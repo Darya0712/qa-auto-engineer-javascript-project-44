@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { numberEven } from '../games/even.js';
+import runEvenGame from '../src/games/even.js';
 import { askName } from '../src/cli.js';
 
 askName();
 
-numberEven();
+runEvenGame();

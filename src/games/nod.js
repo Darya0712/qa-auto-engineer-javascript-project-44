@@ -1,6 +1,4 @@
-import { commonLogic, setCondition } from '../src/index.js';
-import { getRandomInt } from './even.js';
-
+import { commonLogic, getRandomInt } from '../index.js';
 
 const gcd = (a, b) => {
   while (b !== 0) {
@@ -20,7 +18,8 @@ const generateQuestionNod = () => {
   return [question, correctAnswer];
 };
 
-export const nod = () => {
-  setCondition('Find the greatest common divisor of given numbers.');
+const runNodGame = () => {
+  console.log('Find the greatest common divisor of given numbers.');
   commonLogic(generateQuestionNod);
 };
+export default runNodGame;
