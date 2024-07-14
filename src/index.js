@@ -20,13 +20,13 @@ export const commonLogic = (question) => {
 
     console.log(`Question: ${exp}`);
 
-    userAnswer = readlineSync.question('Your answer:');
+    userAnswer = readlineSync.question('Your answer: ');
     myAnswer = forSaveResult[1];
 
     if (myAnswer.toString() === userAnswer.toLowerCase()) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${myAnswer}'. \nLet's try again,${name}`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${myAnswer}'. \nLet's try again, ${name}`);
       return;
     }
   }
