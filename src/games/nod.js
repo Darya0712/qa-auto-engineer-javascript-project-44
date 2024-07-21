@@ -1,12 +1,14 @@
 import { commonLogic, getRandomInt } from '../index.js';
 
 const gcd = (a, b) => {
-  while (b !== 0) {
-    const temp = b;
-    b = a % b;
-    a = temp;
+  let num1 = a;
+  let num2 = b;
+  while (num2 !== 0) {
+    const temp = num2;
+    num2 = num1 % num2;
+    num1 = temp;
   }
-  return a;
+  return num1;
 };
 
 const generateQuestionNod = () => {

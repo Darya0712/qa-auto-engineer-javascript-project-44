@@ -4,7 +4,7 @@ let progression;
 
 const calculateProgression = (length, start, step) => {
   progression = [start];
-  for (let i = 1; i < length; i++) {
+  for (let i = 1; i < length; i += 1) {
     progression.push(progression[i - 1] + step);
   }
   return progression;

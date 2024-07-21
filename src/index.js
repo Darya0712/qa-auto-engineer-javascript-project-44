@@ -8,20 +8,18 @@ let userAnswer;
 const rounds = 3;
 
 export const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  const minCeil = Math.ceil(min);
+  const maxFloor = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloor - minCeil + 1)) + minCeil;
 };
-
 export const commonLogic = (question) => {
   for (let i = 1; i <= rounds; i += 1) {
-    const forSaveResult = question();
-    const exp = forSaveResult[0];
+    const [exp, answer] = question();
 
     console.log(`Question: ${exp}`);
 
     userAnswer = readlineSync.question('Your answer: ');
-    myAnswer = forSaveResult[1];
+    myAnswer = answer;
 
     if (myAnswer.toString() === userAnswer.toLowerCase()) {
       console.log('Correct!');
