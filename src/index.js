@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { name } from './cli.js';
+import { getName } from './cli.js';
 
 let myAnswer;
 
@@ -26,9 +26,9 @@ export const commonLogic = (question) => {
     if (myAnswer.toString() === userAnswer.toLowerCase()) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${myAnswer}'. \nLet's try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${myAnswer}'. \nLet's try again, ${getName()}!`);
       return;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${getName()}!`);
 };

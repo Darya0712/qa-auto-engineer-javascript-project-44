@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export let name;
+let name;
 
 const askName = () => {
   console.log('Welcome to the Brain Games!'); // eslint-disable-line no-console
@@ -8,4 +8,6 @@ const askName = () => {
   console.log(`Hello, ${name}!`); // eslint-disable-line no-console
 };
 
-export { askName };
+const getName = () => name;
+
+export { askName, getName };
