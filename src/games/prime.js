@@ -2,19 +2,21 @@ import { commonLogic, getRandomInt } from '../index.js';
 
 const calculatePrime = (num) => {
   if (num <= 1) {
-    return 'no';
+    return false;
   }
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
+
+const boolAnswer = (bool) => (bool === true ? 'yes' : 'no');
 
 const generationQuestionForPrime = () => {
   const question = getRandomInt(1, 100);
-  const correctAnswer = calculatePrime(question);
+  const correctAnswer = boolAnswer(calculatePrime(question));
   return [question, correctAnswer];
 };
 
